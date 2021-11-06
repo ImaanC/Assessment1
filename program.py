@@ -15,15 +15,6 @@ from google.colab import drive
 
 drive.mount("/gdrive", force_remount=True)
 
-# Commented out IPython magic to ensure Python compatibility.
-# %cd '/gdrive/My Drive/Assessment/Input'
-
-# Commented out IPython magic to ensure Python compatibility.
-# %reload_ext google.colab.data_table
-
-# Commented out IPython magic to ensure Python compatibility.
-# %ls
-
 df = pd.read_csv('input.csv')
 
 df['Average']=df.mean(axis=1).round(1)
