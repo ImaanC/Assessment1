@@ -26,7 +26,7 @@ drive.mount("/gdrive", force_remount=True)
 
 df = pd.read_csv('input.csv')
 
-df['Average']=df.mean(axis=1).round(0)
+df['Average']=df.mean(axis=1).round(1)
 
 df['Grade'] = pd.cut(df['Average'], bins=[0 , 39 , 49, 59, 69, 70 ,100 ], labels= ['F','E', 'D', 'C', 'B', 'A'])
 df.iloc[0:11,[0,1,6,7]]
